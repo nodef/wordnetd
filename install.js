@@ -11,5 +11,7 @@ var path = '.';
 
 // 2. download and extract
 download([{url, dest}], {}).get((err) => {
-  fs.createReadStream(dest).pipe(unzip.Extract({path}));
+  var wrt = unzip.Extract({path});
+  fs.createReadStream(dest).pipe(wrt);
+  wrt.on('finish', () => fs.unlinkSync(dest));
 });
