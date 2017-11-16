@@ -4,7 +4,7 @@ const cp = require('child_process');
 
 
 // 1. settings
-var url = 'http://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.gz';
+var url = 'http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz';
 var dest = 'index.tar.gz';
 var path = '.';
 
@@ -12,10 +12,6 @@ var path = '.';
 // 2. download and extract
 download([{url, dest}], {}).get((err) => {
   tar.extract({'file': dest}).then(() => {
-    cp.execSync(
-      'rm index.tar.gz && '+
-      'mv WordNet-3.0/* . && '+
-      'rmdir WordNet-3.0'
-    );
+    cp.execSync('rm index.tar.gz');
   });
 });
