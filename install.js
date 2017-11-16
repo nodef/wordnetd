@@ -1,17 +1,21 @@
 const download = require('download-progress/lib/download-progress');
-const unzip = require('unzip');
-const fs = require('fs');
+const tar = require('tar');
+const cp = require('child_process');
 
 
 // 1. settings
-var url = 'http://wordnetcode.princeton.edu/1.5/wn15.zip';
-var dest = 'index.zip';
+var url = 'http://wordnetcode.princeton.edu/1.6/wn16.unix.tar.gz';
+var dest = 'index.tar.gz';
 var path = '.';
 
 
 // 2. download and extract
 download([{url, dest}], {}).get((err) => {
-  var wrt = unzip.Extract({path});
-  fs.createReadStream(dest).pipe(wrt);
-  wrt.on('finish', () => fs.unlinkSync(dest));
+  tar.extract({'file': dest}).then(() => {
+    cp.execSync(
+      'rm index.tar.gz && '+
+      'mv wordnet-1.6/* . && '+
+      'rmdir wordnet-1.6'
+    );
+  });
 });
