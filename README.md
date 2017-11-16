@@ -5,6 +5,6 @@
 Download UNIX-like WordNet version from Princeton University.
 
 ```bash
-# install wordnet 1.5
-npm install --save wordnetd@1.5
+# install wordnet 1.6
+npm install --save wordnetd@1.6
 ```
