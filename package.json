@@ -1,6 +1,6 @@
 {
   "name": "wordnetd",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Download UNIX-like WordNet version from Princeton University.",
   "main": "index.js",
   "scripts": {
