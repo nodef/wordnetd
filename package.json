@@ -1,9 +1,10 @@
 {
   "name": "wordnetd",
-  "version": "1.5.1",
+  "version": "1.5.0",
   "description": "Download UNIX-like WordNet version from Princeton University.",
   "main": "index.js",
   "scripts": {
+    "install": "node install",
     "test": "exit"
   },
   "repository": {
