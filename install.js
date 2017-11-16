@@ -14,7 +14,7 @@ download([{url, dest}], {}).get((err) => {
   tar.extract({'file': dest}).then(() => {
     cp.execSync(
       'rm index.tar.gz && '+
-      'mv -r WordNet-2.0/* . && '+
+      'mv WordNet-2.0/* . && '+
       'rmdir WordNet-2.0'
     );
   });
