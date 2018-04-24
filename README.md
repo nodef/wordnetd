@@ -1,5 +1,7 @@
 # wordnetd
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nodef/wordnetd.svg)](https://greenkeeper.io/)
+
 [![NPM](https://nodei.co/npm/wordnetd.png)](https://nodei.co/npm/wordnetd/)
 
 Download UNIX-like WordNet version from Princeton University.
