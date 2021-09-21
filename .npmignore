@@ -1,0 +1,4 @@
+# Build
+.travis.yml
+.coveralls.yml
+dict/

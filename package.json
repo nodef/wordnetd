@@ -1,10 +1,11 @@
 {
   "name": "wordnetd",
-  "version": "3.1.6",
+  "version": "3.1.10",
   "description": "Download UNIX-like WordNet version from Princeton University.",
   "main": "index.js",
   "scripts": {
-    "install": "node install",
+    "deploy": "ebuild publish+github --publishMin=false --publishBranch=false",
+    "postinstall": "node ./postinstall.js",
     "test": "exit"
   },
   "repository": {
@@ -26,6 +27,9 @@
     "async": "^3.2.1",
     "download-progress": "0.0.1",
     "progress": "^2.0.3",
-    "tar": "^6.1.6"
+    "tar": "^6.1.11"
+  },
+  "devDependencies": {
+    "extra-build": "^1.4.3"
   }
 }

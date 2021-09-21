@@ -4,7 +4,7 @@ const fs = require('fs');
 
 
 // 1. settings
-var url = 'http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz';
+var url = 'https://wordnetcode.princeton.edu/wn3.1.dict.tar.gz';
 var dest = 'index.tar.gz';
 var path = '.';
 
