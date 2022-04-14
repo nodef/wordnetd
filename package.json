@@ -1,6 +1,6 @@
 {
   "name": "wordnetd",
-  "version": "3.1.10",
+  "version": "3.1.11",
   "description": "Download UNIX-like WordNet version from Princeton University.",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/nodef/wordnetd#readme",
   "dependencies": {
-    "async": "^3.2.1",
+    "async": "^3.2.3",
     "download-progress": "0.0.1",
     "progress": "^2.0.3",
     "tar": "^6.1.11"
   },
   "devDependencies": {
-    "extra-build": "^1.4.3"
+    "extra-build": "^2.0.31"
   }
 }
